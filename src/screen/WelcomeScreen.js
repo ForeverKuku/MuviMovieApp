@@ -12,19 +12,20 @@ const WelcomeScreen = ({ navigation }) => {
         <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
           <Text style={styles.backButtonText}>←</Text>
         </TouchableOpacity>
-       
+        <View style={styles.mButtonContainer}>
         <TouchableOpacity style={styles.mButton}>
           <Text style={styles.mButtonText}>M</Text>
         </TouchableOpacity>
         <Text style={styles.titleText}>Muvi</Text>
       </View>
+      </View>
       <View style={styles.fakeRightButton}></View>
       <Image
-        source={require('../image/loga.jpg')}
+        source={require('../image/loga-removebg.png')}
         style={styles.logo}
       />
 
-      <Text>Welcome to Muvi</Text>
+      <Text style={styles.welcomeText}>Welcome to Muvi</Text>
       <Text style={styles.subtitle}>
         Free movies streaming all your needs; everytime and everywhere.
       </Text>
@@ -38,7 +39,7 @@ const WelcomeScreen = ({ navigation }) => {
         style={styles.button}
         onPress={handleSignInScreen}
       >
-        <Text style={styles.buttonText}>Sign In</Text>
+        <Text style={styles.buttonText1}>Sign In</Text>
       </TouchableOpacity>
     </View>
 
@@ -51,28 +52,33 @@ const styles = StyleSheet.create({
         alignItems: 'center', 
         justifyContent: 'center', 
         padding: 20,
-        backgroundColor: 'black',
+        backgroundColor: '#000000',
       },
       headerRow: {
         flexDirection: 'row', 
         alignSelf: 'flex-start', 
         alignItems: 'center',
-        justifyContent:'space-between',
+        justifyContent:'center',
         width: '100%', 
-        marginBottom: 40, 
+        marginBottom: 20, 
       },
       backButton: {
         marginRight: 20, 
+        position:'absolute',
+        left:20
+      },
+      mButtonContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
       },
       backButtonText: {
         fontSize: 24, 
+        color:'white',
       },
       mButton: {
         backgroundColor: 'gold', 
-        padding: 10, 
-        marginRight: 5,
-
-         
+        padding: 3, 
+        marginRight: 10,  
       },
       mButtonText: {
         fontSize: 20, 
@@ -80,30 +86,49 @@ const styles = StyleSheet.create({
       },
       titleText: {
         fontSize: 24, 
-    
+        color:'white',
+        fontWeight:'bold',
       },
       logo: {
         width: 200, 
         height: 200, 
-        marginBottom: 90,
+        marginBottom: 20,
         justifyContent:'center',
+        resizeMode:'cover,'
+      },
+      welcomeText:{
+        color:'white',
+        fontSize:20,
+        marginBottom:10,
       },
       subtitle: {
         textAlign: 'center', 
-        marginBottom: 20, 
+        marginBottom: 70,
+        color:'white' 
       },
      
       button: {
-        padding: 10,
-        borderRadius: 5,
+        paddingVertical: 10,
+        paddingHorizontal:20,
+        borderRadius: 8,
         marginBottom: 10, 
         width: '100%', 
       },
       watchMoviesButton: {
         backgroundColor: 'gold', 
+        marginBottom:10,
       },
       buttonText: {
-        textAlign: 'center', 
+        textAlign: 'center',
+        color:'black', 
+        fontSize: 18,
+        fontWeight:'bold',
+      },
+      buttonText1: {
+        textAlign: 'center',
+        color:'white', 
+        fontSize: 18,
+        fontWeight:'bold',
       },
 });
 

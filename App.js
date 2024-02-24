@@ -6,6 +6,7 @@ import GetStarted from './src/screen/GetStarted';
 import WelcomeScreen from './src/screen/WelcomeScreen';
 import SignInScreen from './src/screen/SignInScreen';
 import CreateAccount from './src/screen/CreateAccount';
+import HomeScreen from './src/screen/HomeScreen';
 const Stack = createNativeStackNavigator();
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
         <Stack.Screen name="WelcomeScreen" component={WelcomeScreen} options={{headerShown:false}} />
         <Stack.Screen name="SignInScreen" component={SignInScreen} options={{headerShown:false}} />
         <Stack.Screen name="CreateAccount" component={CreateAccount} options={{headerShown:false}} />
+        <Stack.Screen name="HomeScreen" component={HomeScreen} options={{headerShown:false}} />
       
       </Stack.Navigator>
     </NavigationContainer>

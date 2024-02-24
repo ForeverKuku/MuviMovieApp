@@ -31,41 +31,49 @@ const GetStarted = ({ navigation }) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1, 
-        justifyContent: 'space-between', 
+        justifyContent: 'center', 
         alignItems: 'center', 
         padding: 20, 
+        resizeMode:'cover',
       },
+     
       title: {
         fontSize: 24,
         fontWeight: 'bold',
         color: '#FFFFFF', 
         textAlign: 'center',
-        marginTop: 'auto', 
-       
+        marginTop:180,
+        textAlign:'left',
+        
       },
       subtitle: {
         fontSize: 16,
         color: '#FFFFFF', 
         textAlign: 'center',
         paddingHorizontal: 20,
-        marginTop:130,
+        marginTop:10,
+        textAlign:'left',
+        
       },
       button: {
         backgroundColor: 'gold', 
-        paddingHorizontal: 0, 
+        paddingHorizontal: 20, 
         paddingVertical: 10, 
         borderRadius: 5, 
         alignSelf: 'stretch',
-        
+        marginTop:'auto',
       },
       buttonText: {
         fontSize: 20,
         color: '#000000', 
         textAlign: 'center', 
+        fontWeight:'bold',
       },
       backButton: {
-        alignSelf: 'flex-start', 
-        marginTop: 10, 
+        postion:'absolute' ,
+        alignSelf: 'flex-start',
+        marginTop: 20, 
+       
       },
       backButtonText: {
         fontSize: 24, 
